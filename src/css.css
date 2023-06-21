@@ -1,3 +1,13 @@
+body {
+	background-image: url(world.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 550%;
+	width: max-content;
+	display: block;
+	background-blend-mode: saturation;
+}
+
 .select-city {
 	padding: 5px;
 	border-radius: 4px;
