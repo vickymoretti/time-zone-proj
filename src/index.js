@@ -35,3 +35,17 @@ function showSelectedCity(event) {
 		}
 	}
 }
+
+/* --- a reduce solution that is not mine ---
+
+function showSelectedCity(event) {
+	if (event.target.value.length > 0) {
+		let currentTime = moment()
+			.tz(event.target.value)
+			.format("dddd, MMMM Do YYYY, h:mm:ss a");
+
+		alert(`it is ${currentTime} in ${event.target.value}`);
+	}
+}
+
+*/
