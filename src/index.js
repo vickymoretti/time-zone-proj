@@ -1,3 +1,5 @@
+/*
+
 let cities = document.querySelector("#select-city");
 cities.addEventListener("change", showSelectedCity);
 
@@ -47,5 +49,4 @@ function showSelectedCity(event) {
 		alert(`it is ${currentTime} in ${event.target.value}`);
 	}
 }
-
 */
