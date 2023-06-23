@@ -2,26 +2,75 @@ body {
 	background-image: url(world.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 550%;
-	background-blend-mode: saturation;
+	height: 100%;
+	font-family: "Merriweather", serif;
+	background-attachment: fixed;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 0;
+	padding: 10px;
+	font-size: 38px;
+}
+
+h2 {
+	padding-top: 10px;
+	margin: 0;
+	font-size: 26px;
 }
 
 .container {
 	display: block;
 	max-width: 600px;
 	background: rgba(255, 255, 255, 0.4);
-	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
-	margin: 0 auto;
+	box-shadow: 1px 2px 17px rgba(0, 0, 0, 0.4);
+	margin: 52px auto 2px auto;
 	border-radius: 8px;
-	padding: 60px;
+	padding: 40px;
 }
 
-h1 {
-	text-align: center;
-}
-
-/* .select-city {
-	padding: 5px;
+.select-city {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	padding: 8px;
 	border-radius: 4px;
+	font-size: 16px;
+	font-family: "Merriweather", serif;
 }
-*/
+
+.city {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+	border-bottom: 1px dashed grey;
+	padding: 20px 0;
+}
+
+.city:last-child {
+	border-bottom: none;
+}
+
+.date {
+	padding-top: 4px;
+	font-size: 14px;
+}
+
+.time {
+	font-size: 32px;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.time small {
+	font-size: 18px;
+	vertical-align: middle;
+	line-height: 36px;
+}
+
+footer {
+	font-family: "Merriweather", serif;
+	text-align: center;
+	padding-top: 10px;
+}
