@@ -13,7 +13,9 @@ function updateTime() {
 	let buenosAires = moment().tz("America/Argentina/Buenos_Aires");
 
 	buenosAiresDate.innerHTML = buenosAires.format("dddd, MMMM Do YYYY");
-	buenosAiresTime.innerHTML = buenosAires.format("h:mm:ss [<small>]A[<small>]");
+	buenosAiresTime.innerHTML = buenosAires.format(
+		"h:mm:ss [<small>]A[</small>]"
+	);
 }
 updateTime();
 setInterval(updateTime, 1000);
