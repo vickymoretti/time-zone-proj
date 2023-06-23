@@ -1,6 +1,24 @@
-/*
+function updateTime() {
+	let dublinElement = document.querySelector("#dublin");
+	let dublinDate = dublinElement.querySelector(".date");
+	let dublinTime = dublinElement.querySelector(".time");
+	let dublin = moment().tz("Europe/Dublin");
 
-let cities = document.querySelector("#select-city");
+	dublinDate.innerHTML = dublin.format("dddd, MMMM Do YYYY");
+	dublinTime.innerHTML = dublin.format("h:mm:ss [<small>]A[<small>]");
+
+	let buenosAiresElement = document.querySelector("#buenos-aires");
+	let buenosAiresDate = buenosAiresElement.querySelector(".date");
+	let buenosAiresTime = buenosAiresElement.querySelector(".time");
+	let buenosAires = moment().tz("America/Argentina/Buenos_Aires");
+
+	buenosAiresDate.innerHTML = buenosAires.format("dddd, MMMM Do YYYY");
+	buenosAiresTime.innerHTML = buenosAires.format("h:mm:ss [<small>]A[<small>]");
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+/*let cities = document.querySelector("#select-city");
 cities.addEventListener("change", showSelectedCity);
 
 let parisTime = moment()
