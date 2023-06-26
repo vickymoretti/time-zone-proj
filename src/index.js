@@ -16,6 +16,14 @@ function updateTime() {
 	buenosAiresTime.innerHTML = buenosAires.format(
 		"h:mm:ss [<small>]A[</small>]"
 	);
+
+	let romeElement = document.querySelector("#rome");
+	let romeDate = romeElement.querySelector(".date");
+	let romeTime = romeElement.querySelector(".time");
+	let rome = moment().tz("Europe/Rome");
+
+	romeDate.innerHTML = rome.format("dddd, MMMM Do YYYY");
+	romeTime.innerHTML = rome.format("h:mm:ss [<small>]A[</small>]");
 }
 updateTime();
 setInterval(updateTime, 1000);
