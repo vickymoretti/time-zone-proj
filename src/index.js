@@ -25,11 +25,12 @@ function updateTime() {
 	romeDate.innerHTML = rome.format("dddd, MMMM Do YYYY");
 	romeTime.innerHTML = rome.format("h:mm:ss [<small>]A[</small>]");
 }
-updateTime();
-setInterval(updateTime, 1000);
 
 function showSelectedCity(event) {
 	let cityTimeZone = event.target.value;
+	if (cityTimeZone === "current") {
+		cityTimeZone = moment.tz.guess();
+	}
 	let cityName = cityTimeZone.replace("-", " ").split("/")[1];
 	let cityTime = moment().tz(cityTimeZone);
 	let cityElement = document.querySelector(".cities");
@@ -43,6 +44,9 @@ function showSelectedCity(event) {
 	)}</small> </div>
 				</div>`;
 }
+
+updateTime();
+setInterval(updateTime, 1000);
 
 let cities = document.querySelector("#select-city");
 cities.addEventListener("change", showSelectedCity);
