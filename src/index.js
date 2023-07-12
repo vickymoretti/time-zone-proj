@@ -43,6 +43,10 @@ function showSelectedCity(event) {
 		"A"
 	)}</small> </div>
 				</div> <a href="/"> All cities</a>`;
+
+	setTimeout(() => {
+		showSelectedCity(event);
+	}, 1000);
 }
 
 updateTime();
